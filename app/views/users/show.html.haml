@@ -1,0 +1,28 @@
+.jumbotron
+  %h1
+    = image_tag(@user_bio.image_url)
+    = "@#{@user_bio.screen_name}"
+  %p
+    %h4
+      = t('.followers')
+    %p
+      = @user_bio.followers_count
+- @user_tweets.each do |tweet|
+  .panel.panel-success
+    .panel-heading
+      %h3.panel-title
+        = link_to "@#{tweet.original_user_name}", user_path(tweet.original_user_name)
+        .text-right
+          = tweet.created_at
+    .panel-body
+      - url = extract_url(tweet.description, 'http')
+      .text-left
+        %p
+          = tweet.description
+        - if(url != nil)
+          %p
+            = link_to url, url
+      .text-right
+        %p
+          = t('.retweets')
+          = tweet.retweet

@@ -1,0 +1,12 @@
+.text-center
+  %h1
+    = @hashtag_tweets.hashtag_name
+  - @hashtag_tweets.each do |status|
+    .jumbotron
+      %h3
+        = image_tag(status.user_image_url)
+        = link_to "@#{status.user_screen_name}", user_path(status.user_screen_name)
+      %p
+        = status.description
+      - url = extract_url(status.description, 'http')
+      = show_share_content(url)

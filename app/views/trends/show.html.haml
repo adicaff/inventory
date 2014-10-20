@@ -1,0 +1,8 @@
+.text-center
+  %h1
+    = t('.trending_topics')
+  %table.table.table-striped.table-hover
+    - @trends.each do |trend|
+      %tr
+        %td
+          = link_to trend, hashtag_path(trend)

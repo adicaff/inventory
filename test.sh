@@ -11,7 +11,11 @@ load() {
 req_exec "gem"
 req_exec "bundle" gem install bundler
 
+req_exec rspec
+req_file config/config{,.sample}.yml
+req_file config/database{,.sample}.yml
+req_file config/secrets{,.sample}.yml
+
 run bundle install
 
-run bundle exec rspec
-
+bundle exec rake spec

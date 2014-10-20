@@ -1,0 +1,10 @@
+.panel.panel-info
+  .panel-heading
+    %h3
+      .panel-title
+        = link_to @page.url, @page.url
+  .panel-body
+    .text-left
+      = @page.title
+    .text-right
+      = image_tag(select_image(@page.image, @page.images))

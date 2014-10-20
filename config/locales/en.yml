@@ -1,0 +1,12 @@
+en:
+  users:
+    show:
+      followers: 'Followers: '
+  users:
+    show:
+      retweets: 'Retweets: '
+  trends:
+    index:
+      trending_topics: 'Trending Topics'
+      regional: 'Regional'
+      worldwide:  'Worldwide'

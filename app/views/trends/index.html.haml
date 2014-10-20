@@ -1,0 +1,10 @@
+.text-center
+  %h1
+    = t('.trending_topics')
+  %table.table.table-striped.table-hover
+    %tr
+      %td
+        = link_to t('.worldwide'), trend_path(TrendsController::WORLDWIDE_ID)
+    %tr
+      %td
+        = link_to t('.regional'), trend_path(TrendsController::REGIONAL_ID)
