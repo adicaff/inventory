@@ -1,0 +1,11 @@
+= render 'nav'
+.container
+  %h1
+    .text-center
+      = t('.items')
+  - @items.reverse.each do |item|
+    %h2
+      = link_to item.name, item_path(item.slug)
+    = "#{item.description}"
+    %br
+    = item.ubication

@@ -1,0 +1,50 @@
+en:
+  application:
+    back:      'back.jpeg'
+    home:      'home.jpg'
+    exit:      'exit.jpeg'
+    login:     'Log in'
+    signup:    'Sign up'
+    items:     'Add items'
+    info:      'info.jpg'
+    ubication: 'ubication.jpg'
+    commit:    'commit'
+    mooveit: 'Moove-it Inventory'
+    logout:  'Log out'
+    new_item: 'New Item'
+  uploaders:
+    avatar_uploader:
+      directory: 'uploads/%{class}/%{mounted_as}/%{id}'
+  home:
+    index:
+      manage:  'Manage Items'
+      mooveit: 'Moove-it Inventory'
+    user_widget:
+      welcome: 'Welcome %{user}'
+  items:
+    nav:
+      manage: 'Manage Items'
+    success_created: 'User was successfully created.'
+    success_updated: 'User was successfully updated.'
+    form:
+      name:        'Name'
+      ubication:   'Ubication'
+      description: 'Description'
+      item_avatar: 'item[avatar]'
+    show:
+      sure:        'Are you sure?'
+      back:        'Back'
+      print:       "Print this item's qr code to mark it!!"
+      edit:        'edit.jpeg'
+      bin:         'recicle_bin.jpg'
+      print_image: 'print.jpeg'
+    edit:
+      update_item: 'Update Item'
+    index:
+      at: 'At %{ubication}'
+      items: 'Items'
+    update:
+      concurrence_error: 'Could not update, this item has changed since your request. Please try again!'
+  layouts:
+    application:
+      inventory: 'MooveItInventory'

@@ -1,0 +1,20 @@
+= render 'nav'
+.container
+  %h1
+    .text-center
+      = "#{@item.name}"
+  .jumbotron
+    = "#{@item.description}"
+    %br
+    = @item.ubication
+    .text-right
+      = image_tag(@item.avatar)
+    .item-action
+      = link_to image_tag(t('.edit')), edit_item_path(@item.slug)
+      = link_to image_tag(t('.bin')), @item, method: :delete, data: { confirm: t('.sure') }
+  .text-center
+    %h2
+      = t('.print')
+    = image_tag(@item.qr_code)
+    %p
+    = link_to image_tag(t('.print_image')),'', onclick: 'printpage()'

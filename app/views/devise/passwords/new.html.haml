@@ -1,0 +1,16 @@
+.text-center
+  %h1
+    = t('.forgot_password')
+  = form_for(resource, as: resource_name, url: password_path(resource_name),
+            html: { class: 'form-horizontal', method: :post }) do |f|
+    = devise_error_messages!
+    %fieldset
+      .form-group
+        .col-lg-offset-3
+          = f.label :email, class: 'col-lg-2 control-label'
+        .col-lg-4
+          = f.email_field :email, autofocus: true, class: 'form-control', placeholder: t('application.email')
+    .actions
+      = f.submit t('.password_instructions'), class: 'btn btn-warning'
+  %br
+  = render 'devise/shared/links'

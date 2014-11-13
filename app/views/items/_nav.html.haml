@@ -1,0 +1,24 @@
+.navbar.navbar-inverse
+  .navbar-header
+    %button.navbar-toggle{'data-target' => '.navbar-inverse-collapse', 'data-toggle' => 'collapse', :type => 'button'}
+      %span.icon-bar
+      %span.icon-bar
+      %span.icon-bar
+    %a.navbar-brand{:href => root_path}
+      = t('application.mooveit')
+  .navbar-collapse.collapse.navbar-responsive-collapse
+    %ul.nav.navbar-nav
+      %li.dropdown
+        %a.dropdown-toggle{'aria-expanded' => 'true', 'data-toggle' => 'dropdown'}
+          = t('application.index.items')
+          %b.caret
+        %ul.dropdown-menu
+          %li
+            %a{:href => new_item_path}
+              = t('application.new_item')
+          %li
+            %a{:href => items_path}
+              = t('.manage')
+    %ul.nav.navbar-nav.navbar-right
+      %li
+        = link_to t('application.logout'), destroy_user_session_path, method: :delete
