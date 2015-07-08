@@ -14,8 +14,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
+//= require print
 //= require_tree .
-function printpage()
-{
-    window.print()
-}

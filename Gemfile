@@ -22,3 +22,4 @@ gem 'carrierwave'                           # Image upload manager
 gem 'rqrcode_png'                           # QR code generator
 gem 'capybara', '~> 2.4.4'                  # Views testing
 gem 'factory_girl_rails', '~> 4.0'          # Create objects for testing
+gem 'faker'                                 # For fake test data

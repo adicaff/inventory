@@ -2,19 +2,19 @@
 .container
   %h1
     .text-center
-      = "#{@item.name}"
+      = @item.name
   .jumbotron
-    = "#{@item.description}"
+    = @item.description
     %br
-    = @item.ubication
+    = @item.location
     .text-right
       = image_tag(@item.avatar)
     .item-action
-      = link_to image_tag(t('.edit')), edit_item_path(@item.slug)
-      = link_to image_tag(t('.bin')), @item, method: :delete, data: { confirm: t('.sure') }
+      = link_to image_tag('edit.jpeg'), edit_item_path(@item.name)
+      = link_to image_tag('recycle_bin.jpg'), @item, method: :delete, data: { confirm: t('.sure') }
   .text-center
     %h2
       = t('.print')
     = image_tag(@item.qr_code)
     %p
-    = link_to image_tag(t('.print_image')),'', onclick: 'printpage()'
+    = image_tag('print.jpeg', id: 'print_img')

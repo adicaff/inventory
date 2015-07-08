@@ -1,8 +1,9 @@
 require 'rails_helper'
 
 feature 'Visitor signs up' do
+  let(:password) { Faker::Internet.password(8) }
   scenario 'with valid email, password and confirmation' do
-    sign_up_with 'koko@koko.com', 'kokokoko', 'kokokoko'
+    sign_up_with Faker::Internet.email, password, password
 
     expect(page).to have_content('Log out')
   end

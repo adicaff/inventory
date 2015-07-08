@@ -1082,7 +1082,7 @@ h1,
 }
 h2,
 .h2 {
-  font-size: 32px;
+  font-size: 39px;
 }
 h3,
 .h3 {
@@ -6423,7 +6423,6 @@ label,
 .radio label,
 .checkbox label,
 .help-block {
-  font-size: 12px;
   font-weight: 300;
 }
 .input-addon,

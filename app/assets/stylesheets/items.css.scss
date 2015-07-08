@@ -1,50 +1,30 @@
-.notice {
-  color: #2caa2e;
-}
-
-.div img {
-    max-height: 200px;
-    max-width: 200px;
-}
-
 h1 {
   font-style: inherit;
 }
 .alert {
   color: #fcf6ff;
 }
-
-.btn.btn-mooveit {
-  background-color: #FF8636;
-  height: 35px;
-  line-height: 6px;
+.notice {
+  color: #2caa2e;
 }
-
+@media print {
+  .jumbotron {
+    opacity: 0;
+  };
+}
 .item-action {
   opacity: 0;
   transition: opacity .35s ease-in-out;
   -moz-transition: opacity .35s ease-in-out;
   -webkit-transition: opacity .35s ease-in-out;
 }
-
+.jubotron img {
+  max-height: 200px;
+  max-width: 200px;
+}
 .jumbotron:hover .item-action {
   opacity: 1;
   transition: opacity .35s ease-in-out;
   -moz-transition: opacity .35s ease-in-out;
   -webkit-transition: opacity .35s ease-in-out;
-}
-
-a.btn.btn-mooveit{
-  color: #FFFFFF;
-  font-weight: bold;
-}
-
-legend {
-  color: #FF8636;
-}
-
-@media print {
-  .jumbotron {
-    opacity: 0;
-  };
 }

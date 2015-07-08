@@ -4,8 +4,7 @@
       %span.icon-bar
       %span.icon-bar
       %span.icon-bar
-    %a.navbar-brand{:href => root_path}
-      = t('application.mooveit')
+    = link_to t('application.mooveit'), root_path, class: 'navbar-brand'
   .navbar-collapse.collapse.navbar-responsive-collapse
     %ul.nav.navbar-nav
       %li.dropdown
@@ -14,11 +13,11 @@
           %b.caret
         %ul.dropdown-menu
           %li
-            %a{:href => new_item_path}
-              = t('application.new_item')
+            = link_to t('application.new_item'), new_item_path
           %li
-            %a{:href => items_path}
-              = t('.manage')
+            = link_to t('.manage'), items_path
     %ul.nav.navbar-nav.navbar-right
       %li
         = link_to t('application.logout'), destroy_user_session_path, method: :delete
+    %form.navbar-form.navbar-right{'action' => 'items/search'}
+      %input.form-control.col-lg-7{id: 'search_field', placeholder: 'Search', type: 'text'}

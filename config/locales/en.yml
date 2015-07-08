@@ -1,20 +1,12 @@
 en:
   application:
-    back:      'back.jpeg'
-    home:      'home.jpg'
-    exit:      'exit.jpeg'
     login:     'Log in'
     signup:    'Sign up'
     items:     'Add items'
-    info:      'info.jpg'
-    ubication: 'ubication.jpg'
     commit:    'commit'
     mooveit: 'Moove-it Inventory'
     logout:  'Log out'
     new_item: 'New Item'
-  uploaders:
-    avatar_uploader:
-      directory: 'uploads/%{class}/%{mounted_as}/%{id}'
   home:
     index:
       manage:  'Manage Items'
@@ -35,9 +27,6 @@ en:
       sure:        'Are you sure?'
       back:        'Back'
       print:       "Print this item's qr code to mark it!!"
-      edit:        'edit.jpeg'
-      bin:         'recicle_bin.jpg'
-      print_image: 'print.jpeg'
     edit:
       update_item: 'Update Item'
     index:
